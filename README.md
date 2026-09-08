@@ -139,7 +139,7 @@ This is also known as the cubic Hermite spline or "smoothstep" function in compu
 Differentiation the smoothing kernel $\phi_{0,n}(\tau)$ with respect to $t$ requires the chain rule, since $\tau = t/T$:
 
 $$
-\frac{d}{dt} \phi_{0,n}(\tau) =  \frac{d}{dt} \phi_{0,n}\left(\frac{t}{T}\right) = \frac{d}{d\tau} \phi_{0,n}(\tau) \, \frac{d\tau}{dt} = \frac{1}{T} \phi_{0,n}'(\tau).
+\frac{d}{dt} \phi_{0,n}(\tau) =  \frac{d}{dt} \phi_{0,n}\left(\frac{t}{T}\right) = \frac{d}{d\tau} \phi_{0,n}(\tau)  \frac{d\tau}{dt} = \frac{1}{T} \phi_{0,n}'(\tau).
 $$
 
 As $\phi_{0,n}(\tau)$ is the derivative of the prototype polynomial $p_n(\tau)$, we can also write
@@ -151,7 +151,7 @@ $$
 and more generally,
 
 $$
-\frac{d^r}{dt^r} p_n\left(\frac{t}{T}\right) = \frac{1}{T^r} \, p_n^{(r)}(\tau).
+\frac{d^r}{dt^r} p_n\left(\frac{t}{T}\right) = \frac{1}{T^r}  p_n^{(r)}(\tau).
 $$
 
 The resulting polynomials represent
@@ -173,7 +173,7 @@ and so on.
 The index therefore corresponds to the desired derivative order:
 
 $$
-\phi_{r,n} = \frac{1}{T^r} \, p_n^{(r+1)}.
+\phi_{r,n} = \frac{1}{T^r}  p_n^{(r+1)}.
 $$
 
 As $p_n$ is a polynomial this can be done analytically without any numerical differentiation.
@@ -183,7 +183,7 @@ As $p_n$ is a polynomial this can be done analytically without any numerical dif
 For a sampled signal with sampling period $T_s$ the kernel is sampled at
 
 $$
-t_k = k \, T_s,
+t_k = k  T_s,
 $$
 
 as such the corresponding normalized coordinate is
@@ -213,13 +213,13 @@ Once the kernel has been constructed, differentiation is performed through discr
 For derivative order $r$,
 
 $$
-y^{(r)}[j] \approx \sum_k y[j-k] \, h_{r,n}[k].
+y^{(r)}[j] \approx \sum_k y[j-k]  h_{r,n}[k].
 $$
 
 and for the first order derivative in particular,
 
 $$
-\dot{y}[j] \approx \sum_k y[j-k] \, h_{1,n}[k].
+\dot{y}[j] \approx \sum_k y[j-k]  h_{1,n}[k].
 $$
 
 
