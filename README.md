@@ -58,6 +58,7 @@ The polynomial is constructed such that it fulfills the following properties:
 - $p_n'(0) = 0, \quad p_n'(1) = 0$
 - up to the $n$-th derivative:
 - $p_n^{(n)}(0) = 0, \quad p_n^{(n)}(1) = 0$
+
 This gives $2(n+1) = 2n+2$ boundary conditions, in a similar fashion to Hermite interpolation. This gives the required coefficients for a polynomial of order $2n+1$.
 
 This is best formulated in terms of the derivative of the polynomial
@@ -144,10 +145,7 @@ $$
 As $\phi_{0,n}(\tau)$ is the derivative of the prototype polynomial $p_n(\tau)$, we can also write
 
 $$
-\frac{d}{dt}
-p_n\left(\frac{t}{T}\right)
-=
-\frac{1}{T}p_n'(\tau),
+\frac{d}{dt} p_n\left(\frac{t}{T}\right) = \frac{1}{T}p_n'(\tau),
 $$
 
 and more generally,
